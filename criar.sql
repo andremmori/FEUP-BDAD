@@ -1,75 +1,55 @@
 DROP TABLE IF EXISTS TOP;
 
 CREATE TABLE IF NOT EXISTS TOP(
-    idPlaylist INTEGER REFERENCES PLAYLIST(idPlaylist),
-    dateCreation DATE,
-    CONSTRAINT PLAYLIST_PK PRIMARY KEY (idPlaylist)
+    idTop INTEGER REFERENCES PLAYLIST(idPlaylist),
+    dateCreation DATE
 );
 
 DROP TABLE IF EXISTS PLAYLIST;
 
 CREATE TABLE IF NOT EXISTS PLAYLIST(
-    idUser INTEGER REFERENCES USER(idUser),
+    idPlaylist INTEGER PRIMARY KEY REFERENCES USER(idUser),
     name STRING NOT NULL,
     coverImage BLOB,
-    description STRING,
-    CONSTRAINT PLAYLIST_PK PRIMARY KEY (idUser)
-);
-
-DROP TABLE IF EXISTS PLAYLIST;
-
-CREATE TABLE IF NOT EXISTS PLAYLIST(
-    idUser INTEGER REFERENCES USER(idUser),
-    name STRING NOT NULL,
-    coverImage BLOB,
-    description STRING,
-    CONSTRAINT PLAYLIST_PK PRIMARY KEY (idUser)
+    description STRING
 );
 
 
 DROP TABLE IF EXISTS SONG;
 
 CREATE TABLE IF NOT EXISTS SONG(
-    idAlbum INTEGER REFERENCES ALBUM(idAlbum),
+    idSong INTEGER REFERENCES ALBUM(idAlbum),
     name STRING NOT NULL,
     length TIME,
-    playCounts INTEGER,
-    CONSTRAINT SONG_PK PRIMARY KEY (idAlbum)
+    playCounts INTEGER
 );
 
 
 DROP TABLE IF EXISTS ALBUM;
 
 CREATE TABLE IF NOT EXISTS ALBUM (
-    idAlbum   INTEGER,
+    idAlbum   INTEGER PRIMARY KEY,
     idArtist    INTEGER REFERENCES ARTIST (idArtist),
     name     STRING NOT NULL,
     numberSongs INTEGER,
-    year DATE,
+    year INTEGER,
     label STRING NOT NULL,
-    coverPicture BLOB,
-    CONSTRAINT ALBUM_PK PRIMARY KEY (
-        idAlbum
-    )
+    coverPicture BLOB
 );
 
 DROP TABLE IF EXISTS CONCERT;
 
 CREATE TABLE IF NOT EXISTS CONCERT (
-    idConcert   INTEGER,
+    idConcert   INTEGER PRIMARY KEY,
     idLocation  INTEGER REFERENCES LOCATION (idLocation),
     idArtist    INTEGER REFERENCES ARTIST (idArtist),
-    idUser      INTEGER REFERENCES USER (idUser),
-    dateConcert DATE,
-    CONSTRAINT CONCERT_PK PRIMARY KEY (
-        idConcert
-    )
+    dateConcert DATE
 );
 
 DROP TABLE IF EXISTS ARTIST;
 
 CREATE TABLE IF NOT EXISTS ARTIST (
-    idArtist       INTEGER,
+    idArtist       INTEGER PRIMARY KEY,
     idLocation     INTEGER REFERENCES LOCATION (idLocation),
     idGenre        INTEGER REFERENCES GENRE (idGenre),
     name           STRING  NOT NULL,
@@ -81,43 +61,36 @@ CREATE TABLE IF NOT EXISTS ARTIST (
 DROP TABLE IF EXISTS GENRE;
 
 CREATE TABLE IF NOT EXISTS GENRE (
-    idGenre    INTEGER,
+    idGenre    INTEGER PRIMARY KEY,
     name        STRING  NOT NULL,
-    description STRING  NOT NULL,
-    CONSTRAINT GENRE_PK PRIMARY KEY (idGenre)
+    description STRING  NOT NULL
 );
 
 DROP TABLE IF EXISTS LOCATION;
 
 CREATE TABLE IF NOT EXISTS LOCATION (
-    idLocation INTEGER,
+    idLocation INTEGER PRIMARY KEY,
     city       STRING  NOT NULL,
-    country    STRING  NOT NULL,
-    CONSTRAINT LOCATION_PK PRIMARY KEY (
-        idLocation
-    )
+    country    STRING  NOT NULL
 );
 
 DROP TABLE IF EXISTS SUBSCRIPTION;
 
 CREATE TABLE IF NOT EXISTS SUBSCRIPTION (
-    idUser           INTEGER REFERENCES USER (userId),
+    idUser           INTEGER REFERENCES USER (idUser),
     subscriptionType CHAR    NOT NULL,
     subscriptionFee  DOUBLE,
-    paymentMethod    STRING  NOT NULL,
+    paymentMethod    STRING,
     expirationDate   DATE
 );
 
 DROP TABLE IF EXISTS USER;
 
 CREATE TABLE IF NOT EXISTS USER (
-    idUser         INTEGER,
+    idUser         INTEGER PRIMARY KEY,
     idLocation     INTEGER REFERENCES LOCATION (idLocation),
     name           STRING  NOT NULL,
     email          STRING  NOT NULL,
     profilePicture BLOB,
-    age            INTEGER,
-    CONSTRAINT USER_PK PRIMARY KEY (
-        idUser
-    )
+    age            INTEGER
 );
