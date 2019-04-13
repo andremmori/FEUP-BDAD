@@ -20,8 +20,8 @@ DROP TABLE IF EXISTS SONG;
 CREATE TABLE IF NOT EXISTS SONG(
     idSong INTEGER REFERENCES ALBUM(idAlbum),
     name STRING NOT NULL,
-    length TIME,
-    playCounts INTEGER
+    length TIME CHECK (length > 0),
+    playCounts INTEGER CHECK (length > 0)
 );
 
 
@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS ALBUM (
     idAlbum   INTEGER PRIMARY KEY,
     idArtist    INTEGER REFERENCES ARTIST (idArtist),
     name     STRING NOT NULL,
-    numberSongs INTEGER,
-    year INTEGER,
+    numberSongs INTEGER CHECK (numberSongs > 0),
+    year INTEGER CHECK (year > 1900),
     label STRING NOT NULL,
     coverPicture BLOB
 );
@@ -78,7 +78,7 @@ DROP TABLE IF EXISTS SUBSCRIPTION;
 
 CREATE TABLE IF NOT EXISTS SUBSCRIPTION (
     idUser           INTEGER REFERENCES USER (idUser),
-    subscriptionType CHAR    NOT NULL,
+    subscriptionType CHAR    CHECK (subscriptionType == 'F' OR subscriptionType == 'f' OR subscriptionType == 'P' OR subscriptionType == 'p'),
     subscriptionFee  DOUBLE,
     paymentMethod    STRING,
     expirationDate   DATE
@@ -92,5 +92,5 @@ CREATE TABLE IF NOT EXISTS USER (
     name           STRING  NOT NULL,
     email          STRING  NOT NULL,
     profilePicture BLOB,
-    age            INTEGER
+    age            INTEGER CHECK (age > 0)
 );
