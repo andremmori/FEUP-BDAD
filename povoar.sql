@@ -5,8 +5,8 @@ INSERT INTO LOCATION (idLocation, city, country) VALUES (2, 'SAO PAULO', 'BRAZIL
 INSERT INTO LOCATION (idLocation, city, country) VALUES (3, 'NEW YORK', 'U.S.A.');
 
 
-INSERT INTO GENRE (idGenre, name, description) VALUES (1, 'METAL', 'ROCK N ROLL BABE');
-INSERT INTO GENRE (idGenre, name, description) VALUES (2, 'K-POP', 'POOP');
+INSERT INTO GENRE (idGenre, name, description) VALUES (1, 'METAL', 'Heavy metal.');
+INSERT INTO GENRE (idGenre, name, description) VALUES (2, 'K-POP', 'Korean pop music.');
 INSERT INTO GENRE (idGenre, name, description) VALUES (3, 'BLUES', 'The blues form is a cyclic musical form in which a repeating progression of chords mirrors the call and response scheme commonly found in African and African-American music');
 
 
@@ -20,7 +20,7 @@ INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMeth
 INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (3,'F',0, NULL, NULL);
 
 
-INSERT INTO PLAYLIST (idPlaylist, name, coverImage, description) VALUES (1, 'METAL GODS', NULL, 'THE BEST PLAYLIST TO HEADBANG.');
+INSERT INTO PLAYLIST (idPlaylist, name, coverImage, description) VALUES (1, 'METAL GODS', NULL, 'The best playlist to headbang.');
 INSERT INTO PLAYLIST (idPlaylist, name, coverImage, description) VALUES (2, 'EDM GODS', NULL, 'My playlist.');
 INSERT INTO PLAYLIST (idPlaylist, name, coverImage, description) VALUES (3, 'GOTHIC GODESS', NULL, 'Women in metal.');
 
@@ -30,9 +30,9 @@ INSERT INTO TOP (idTop, dateCreation) VALUES (2, '17/12/2018');
 INSERT INTO TOP (idTop, dateCreation) VALUES (3, '05/04/2019');
 
 
-INSERT INTO ARTIST (idArtist, idLocation, idGenre, name, profilePicture, coverPicture, bio) VALUES (1,1,1,'AMY LEE', NULL, NULL, 'Great');
-INSERT INTO ARTIST (idArtist, idLocation, idGenre, name, profilePicture, coverPicture, bio) VALUES (2,2,2,'BTS', NULL, NULL, 'NOT GOOD.');
-INSERT INTO ARTIST (idArtist, idLocation, idGenre, name, profilePicture, coverPicture, bio) VALUES (3,3,3,'STEVIE RAY VAUGHAN', NULL, NULL, 'GOOD');
+INSERT INTO ARTIST (idArtist, idLocation, idGenre, name, profilePicture, coverPicture, bio) VALUES (1,1,1,'AMY LEE', NULL, NULL, 'Great.');
+INSERT INTO ARTIST (idArtist, idLocation, idGenre, name, profilePicture, coverPicture, bio) VALUES (2,2,2,'BTS', NULL, NULL, 'Not very good.');
+INSERT INTO ARTIST (idArtist, idLocation, idGenre, name, profilePicture, coverPicture, bio) VALUES (3,3,3,'STEVIE RAY VAUGHAN', NULL, NULL, 'Good.');
 
 
 INSERT INTO ALBUM (idAlbum, idArtist, name, numberSongs, year, label, coverPicture) VALUES (1,1,'METEORA', 13, 1997, 'SONY', NULL);
