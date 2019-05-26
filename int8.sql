@@ -1,6 +1,6 @@
---.mode columns;
---.headers on ;
---.nullvalue NULL;
+.mode columns;
+.headers on ;
+.nullvalue NULL;
 
 -- Lista datas em que playlists tornaram-se tops
 

@@ -1,6 +1,6 @@
---.mode columns;
---.headers on ;
---.nullvalue NULL;
+.mode columns;
+.headers on ;
+.nullvalue NULL;
 
 -- Listar os artistas de Metal que sao de New York, USA
 

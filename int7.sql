@@ -1,6 +1,6 @@
---.mode columns;
---.headers on ;
---.nullvalue NULL;
+.mode columns;
+.headers on ;
+.nullvalue NULL;
 
 -- Numero de playlists consideradas TOP criadas por um utilizador
 

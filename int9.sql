@@ -1,6 +1,6 @@
---.mode columns;
---.headers on ;
---.nullvalue NULL;
+.mode columns;
+.headers on ;
+.nullvalue NULL;
 
 -- Listar Artistas e utilizadores com suas Localidades em ordem alfabetica do país
 

@@ -1,6 +1,6 @@
---.mode columns;
---.headers on ;
---.nullvalue NULL;
+.mode columns;
+.headers on ;
+.nullvalue NULL;
 
 -- TOTAL de playcounts para cada genero
 

@@ -26,16 +26,16 @@ INSERT INTO USER (idUser, idLocation, name, email, profilePicture, age) VALUES (
 INSERT INTO USER (idUser, idLocation, name, email, profilePicture, age) VALUES (10,3,'RYAN REYNOLDS','deadpool@marvel.com', 'https://upload.wikimedia.org/wikipedia/commons/1/14/Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_%28cropped%29.jpg', 66);
 
 
-INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (1,'P',15.00, 'PAYPAL', '24/12/2020');
-INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (2,'P',12.90, 'DEBIT', '24/12/2021');
+INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (1,'P',15.00, 'PAYPAL', '2020-12-24');
+INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (2,'P',12.90, 'DEBIT', '2021-12-24');
 INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (3,'F',0, NULL, NULL);
-INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (4,'P',17.99, 'DEBIT', '12/1/1998');
+INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (4,'P',17.99, 'DEBIT', '1998-01-12');
 INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (5,'F',0, NULL, NULL);
 INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (6,'F',0, NULL, NULL);
-INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (7,'P',0, 'PAYPAL', '12/1/1998');
+INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (7,'P',0, 'PAYPAL', '1998-01-12');
 INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (8,'F',0, NULL, NULL);
-INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (9,'P',0, 'PAYPAL', '6/11/2019');
-INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (10,'P',0, 'CREDIT', '1/4/2023');
+INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (9,'P',0, 'PAYPAL', '2019-11-06');
+INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (10,'P',0, 'CREDIT', '2023-04-01');
 
 
 INSERT INTO PLAYLIST (idPlaylist, name, coverImage, description) VALUES (1, 'METAL GODS', NULL, 'The best playlist to headbang.');
@@ -46,9 +46,9 @@ INSERT INTO PLAYLIST (idPlaylist, name, coverImage, description) VALUES (8, 'ROC
 INSERT INTO PLAYLIST (idPlaylist, name, coverImage, description) VALUES (10, 'NEW STUFF', NULL, 'New songs.');
 
 
-INSERT INTO TOP (idTop, dateCreation) VALUES (1, '13/09/2013');
-INSERT INTO TOP (idTop, dateCreation) VALUES (3, '17/12/2018');
-INSERT INTO TOP (idTop, dateCreation) VALUES (8, '05/04/2019');
+INSERT INTO TOP (idTop, dateCreation) VALUES (1, '2013-09-13');
+INSERT INTO TOP (idTop, dateCreation) VALUES (3, '2018-12-17');
+INSERT INTO TOP (idTop, dateCreation) VALUES (8, '2019-04-05');
 
 
 INSERT INTO ARTIST (idArtist, idLocation, idGenre, name, profilePicture, coverPicture, bio) VALUES (1,3,1,'AMY LEE', NULL, NULL, 'Great.');
@@ -87,8 +87,8 @@ INSERT INTO SONG (idSong, name, length, playCounts) VALUES (9, 'HEAR ME NOW', 8,
 INSERT INTO SONG (idSong, name, length, playCounts) VALUES (10, 'PINBALL WIZARD', 1, 12312);
 
 
-INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (1, 1, 1, '12/12/2006');
-INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (2, 2, 2, '14/2/2015');
-INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (3, 3, 3, '22/5/2015');
-INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (4, 4, 4, '14/12/2013');
-INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (5, 5, 5, '14/12/2018');
+INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (1, 1, 1, '2006-12-12');
+INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (2, 2, 2, '2015-02-14');
+INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (3, 3, 3, '2015-05-22');
+INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (4, 4, 4, '2013-12-14');
+INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (5, 5, 5, '2018-12-14');
