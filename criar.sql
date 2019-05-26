@@ -20,7 +20,7 @@ DROP TABLE IF EXISTS SONG;
 CREATE TABLE IF NOT EXISTS SONG(
     idSong INTEGER REFERENCES ALBUM(idAlbum),
     name STRING NOT NULL,
-    length INTEGER,
+    length INTEGER CHECK (length > 0),
     playCounts INTEGER CHECK (playCounts > 0)
 );
 

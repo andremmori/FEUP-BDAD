@@ -1,6 +1,6 @@
-CREATE TRIGGER IF NOT EXISTS SongLen
-BEFORE UPDATE OF length ON SONG
-WHEN length <= 0
+CREATE TRIGGER IF NOT EXISTS UpdtConcert
+BEFORE UPDATE ON CONCERT
+WHEN NEW.dateConcert is NULL
     BEGIN
-        SELECT RAISE(ABORT, "Duração da música inválida.");
+        SELECT RAISE(ABORT, "Data Inválida.");
     END;
