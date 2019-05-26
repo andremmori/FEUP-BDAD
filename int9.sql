@@ -1,3 +1,7 @@
+--.mode columns;
+--.headers on ;
+--.nullvalue NULL;
+
 -- Listar Artistas e utilizadores com suas Localidades em ordem alfabetica do país
 
 SELECT USER.name as Name, LOCATION.city as City, LOCATION.country as Country

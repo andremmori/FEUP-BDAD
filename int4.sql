@@ -1,3 +1,7 @@
+--.mode columns;
+--.headers on ;
+--.nullvalue NULL;
+
 -- Lista de concertos que ocorreram nos primeiros 6 meses do ano de 2015
 
 SELECT ARTIST.name AS Name, CONCERT.dateConcert AS Date

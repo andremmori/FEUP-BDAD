@@ -1,3 +1,7 @@
+--.mode columns;
+--.headers on ;
+--.nullvalue NULL;
+
 -- Contar todos os utilizadores Premium
 
 SELECT count(*) AS NPremium

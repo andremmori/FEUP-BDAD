@@ -1,3 +1,7 @@
+--.mode columns;
+--.headers on ;
+--.nullvalue NULL;
+
 -- Lista datas em que playlists tornaram-se tops
 
 SELECT TOP.dateCreation AS Data, USER.name AS Nome

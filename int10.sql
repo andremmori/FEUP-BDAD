@@ -1,3 +1,7 @@
+--.mode columns;
+--.headers on ;
+--.nullvalue NULL;
+
 -- TOTAL de playcounts para cada genero
 
 SELECT GENRE.name AS Name, SUM(SONG.playCounts) AS PlayCounts
