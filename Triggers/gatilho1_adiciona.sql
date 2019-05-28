@@ -1,6 +1,7 @@
 CREATE TRIGGER IF NOT EXISTS AddUser
-AFTER INSERT ON USER
+BEFORE INSERT ON USER
 FOR EACH ROW
   BEGIN
-    INSERT INTO SUBSCRIPTION (idUser, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES (New.idUser, 'F', 0, NULL, NULL);
+    INSERT INTO SUBSCRIPTION (idSubscription, subscriptionType, subscriptionFee, paymentMethod, expirationDate) VALUES ((SELECT max(idSubscription) AS idMax
+    FROM (SELECT idSubscription FROM SUBSCRIPTION)) + 1 , 'F', 0, NULL, NULL);
   END;

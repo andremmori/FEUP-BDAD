@@ -81,10 +81,20 @@ INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (3,3, 'PRIDE
 INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (4,4, 'SCARED', 3, 123123);
 INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (5,5, 'HELLS BELLS', 2, 2363879205);
 INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (6,6, 'PSYCHOSOCIAL', 12, 1245);
-INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (7,7, 'DONT KNOW', 5, 43634523);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (7,7, 'DONT KNOW', 5, 1);
 INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (8,8, 'TEXAS FLOOD', 7, 12);
 INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (9,9, 'HEAR ME NOW', 8, 42142);
-INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (10,10, 'PINBALL WIZARD', 1, 12312);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (10,10, 'PINBALL WIZARD', 1, 12341242);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (11,10, 'BABA O RILEY', 1, 123412341234);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (12,5, 'BACK IN BLACK', 13, 12341234123);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (13,1, 'BREAKING THE HABBIT', 5, 345634573457);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (14,2, 'CRAWLING', 1, 856860784);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (15,6, 'SNUFF', 4, 63463745);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (16,1, 'FAINT', 6, 23145235);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (17,6, 'DEAD MEMORIES', 8, 1523431);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (18,10, 'WONT GET FOOLED AGAIN', 2, 574345734);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (19,7, 'STILL DUNNO', 5, 1);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (20,10, 'MY GENERATION', 8, 127361872);
 
 
 INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (1, 1, 1, '2006-12-12');
@@ -92,3 +102,54 @@ INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (2, 2,
 INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (3, 3, 3, '2015-05-22');
 INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (4, 4, 4, '2013-12-14');
 INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (5, 5, 5, '2018-12-14');
+
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (1, 10);
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (1, 5);
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (1, 6);
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (2, 5);
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (2, 10);
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (3, 1);
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (4, 8);
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (5, 3);
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (8, 1);
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (10, 9);
+INSERT INTO FOLLOWARTIST(idUser, idArtist) VALUES (10, 2);
+
+INSERT INTO FOLLOWUSER(idUser, idUser) VALUES (1, 2);
+INSERT INTO FOLLOWUSER(idUser, idUser) VALUES (2, 1);
+INSERT INTO FOLLOWUSER(idUser, idUser) VALUES (4, 7);
+INSERT INTO FOLLOWUSER(idUser, idUser) VALUES (10, 8);
+INSERT INTO FOLLOWUSER(idUser, idUser) VALUES (9, 7);
+INSERT INTO FOLLOWUSER(idUser, idUser) VALUES (4, 3);
+INSERT INTO FOLLOWUSER(idUser, idUser) VALUES (5, 2);
+INSERT INTO FOLLOWUSER(idUser, idUser) VALUES (6, 9);
+INSERT INTO FOLLOWUSER(idUser, idUser) VALUES (1, 9);
+INSERT INTO FOLLOWUSER(idUser, idUser) VALUES (1, 9);
+
+INSERT INTO FOLLOWPLAYLIST(idUser, idPlaylist) VALUES (1, 10);
+INSERT INTO FOLLOWPLAYLIST(idUser, idPlaylist) VALUES (2, 10);
+INSERT INTO FOLLOWPLAYLIST(idUser, idPlaylist) VALUES (4, 10);
+INSERT INTO FOLLOWPLAYLIST(idUser, idPlaylist) VALUES (7, 10);
+INSERT INTO FOLLOWPLAYLIST(idUser, idPlaylist) VALUES (8, 3);
+INSERT INTO FOLLOWPLAYLIST(idUser, idPlaylist) VALUES (3, 2);
+INSERT INTO FOLLOWPLAYLIST(idUser, idPlaylist) VALUES (3, 8);
+INSERT INTO FOLLOWPLAYLIST(idUser, idPlaylist) VALUES (9, 1);
+
+INSERT INTO SONGPLAYLIST(idSong, idPlaylist) VALUES (1, 10);
+INSERT INTO SONGPLAYLIST(idSong, idPlaylist) VALUES (3, 10);
+INSERT INTO SONGPLAYLIST(idSong, idPlaylist) VALUES (1, 8);
+INSERT INTO SONGPLAYLIST(idSong, idPlaylist) VALUES (5, 10);
+INSERT INTO SONGPLAYLIST(idSong, idPlaylist) VALUES (7, 2);
+INSERT INTO SONGPLAYLIST(idSong, idPlaylist) VALUES (9, 5);
+INSERT INTO SONGPLAYLIST(idSong, idPlaylist) VALUES (10, 3);
+
+INSERT INTO ARTISTALBUM(idArtist, idAlbum) VALUES (7, 3);
+INSERT INTO ARTISTALBUM(idArtist, idAlbum) VALUES (8, 2);
+INSERT INTO ARTISTALBUM(idArtist, idAlbum) VALUES (2, 4);
+INSERT INTO ARTISTALBUM(idArtist, idAlbum) VALUES (10, 7);
+INSERT INTO ARTISTALBUM(idArtist, idAlbum) VALUES (6, 8);
+INSERT INTO ARTISTALBUM(idArtist, idAlbum) VALUES (3, 3);
+INSERT INTO ARTISTALBUM(idArtist, idAlbum) VALUES (10, 6);
+INSERT INTO ARTISTALBUM(idArtist, idAlbum) VALUES (1, 8);
+INSERT INTO ARTISTALBUM(idArtist, idAlbum) VALUES (3, 9);
+INSERT INTO ARTISTALBUM(idArtist, idAlbum) VALUES (4, 10);
