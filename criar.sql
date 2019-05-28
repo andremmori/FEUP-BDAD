@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS TOP(
 DROP TABLE IF EXISTS PLAYLIST;
 
 CREATE TABLE IF NOT EXISTS PLAYLIST(
-    idPlaylist INTEGER PRIMARY KEY REFERENCES USER(idUser),
+    idPlaylist INTEGER PRIMARY KEY,
+    idUser REFERENCES USER(idUser),
     name STRING NOT NULL,
     coverImage BLOB,
     description STRING
@@ -75,23 +76,24 @@ CREATE TABLE IF NOT EXISTS LOCATION (
     country    STRING  NOT NULL
 );
 
-DROP TABLE IF EXISTS SUBSCRIPTION;
-
-CREATE TABLE IF NOT EXISTS SUBSCRIPTION (
-    idUser           INTEGER PRIMARY KEY REFERENCES USER (idUser),
-    subscriptionType CHAR    CHECK (subscriptionType == 'F' OR subscriptionType == 'f' OR subscriptionType == 'P' OR subscriptionType == 'p'),
-    subscriptionFee  DOUBLE,
-    paymentMethod    STRING,
-    expirationDate   DATE
-);
-
 DROP TABLE IF EXISTS USER;
 
 CREATE TABLE IF NOT EXISTS USER (
     idUser         INTEGER PRIMARY KEY,
+    idSubscription INTEGER REFERENCES SUBSCRIPTION (idSubscription),
     idLocation     INTEGER REFERENCES LOCATION (idLocation),
     name           STRING  NOT NULL,
     email          STRING  NOT NULL UNIQUE,
     profilePicture BLOB,
     age            INTEGER CHECK (age > 0)
+);
+
+DROP TABLE IF EXISTS SUBSCRIPTION;
+
+CREATE TABLE IF NOT EXISTS SUBSCRIPTION (
+    idSubscription   INTEGER PRIMARY KEY,
+    subscriptionType CHAR    CHECK (subscriptionType == 'F' OR subscriptionType == 'f' OR subscriptionType == 'P' OR subscriptionType == 'p'),
+    subscriptionFee  DOUBLE,
+    paymentMethod    STRING,
+    expirationDate   DATE
 );
