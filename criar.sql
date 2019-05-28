@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS TOP;
 
 CREATE TABLE IF NOT EXISTS TOP(
-    idTop INTEGER REFERENCES PLAYLIST(idPlaylist),
-    dateCreation DATE
+    idTop INTEGER PRIMARY KEY REFERENCES PLAYLIST(idPlaylist),
+    dateCreation DATE NOT NULL
 );
 
 DROP TABLE IF EXISTS PLAYLIST;
@@ -18,7 +18,8 @@ CREATE TABLE IF NOT EXISTS PLAYLIST(
 DROP TABLE IF EXISTS SONG;
 
 CREATE TABLE IF NOT EXISTS SONG(
-    idSong INTEGER REFERENCES ALBUM(idAlbum),
+    idSong INTEGER PRIMARY KEY,
+    idAlbum INTEGER REFERENCES ALBUM(idAlbum),
     name STRING NOT NULL,
     length INTEGER CHECK (length > 0),
     playCounts INTEGER CHECK (playCounts > 0)
@@ -62,7 +63,7 @@ DROP TABLE IF EXISTS GENRE;
 
 CREATE TABLE IF NOT EXISTS GENRE (
     idGenre    INTEGER PRIMARY KEY,
-    name        STRING  NOT NULL,
+    name        STRING  NOT NULL UNIQUE,
     description STRING  NOT NULL
 );
 
@@ -77,7 +78,7 @@ CREATE TABLE IF NOT EXISTS LOCATION (
 DROP TABLE IF EXISTS SUBSCRIPTION;
 
 CREATE TABLE IF NOT EXISTS SUBSCRIPTION (
-    idUser           INTEGER REFERENCES USER (idUser),
+    idUser           INTEGER PRIMARY KEY REFERENCES USER (idUser),
     subscriptionType CHAR    CHECK (subscriptionType == 'F' OR subscriptionType == 'f' OR subscriptionType == 'P' OR subscriptionType == 'p'),
     subscriptionFee  DOUBLE,
     paymentMethod    STRING,
@@ -90,7 +91,7 @@ CREATE TABLE IF NOT EXISTS USER (
     idUser         INTEGER PRIMARY KEY,
     idLocation     INTEGER REFERENCES LOCATION (idLocation),
     name           STRING  NOT NULL,
-    email          STRING  NOT NULL,
+    email          STRING  NOT NULL UNIQUE,
     profilePicture BLOB,
     age            INTEGER CHECK (age > 0)
 );

@@ -75,16 +75,16 @@ INSERT INTO ALBUM (idAlbum, idArtist, name, numberSongs, year, label, coverPictu
 INSERT INTO ALBUM (idAlbum, idArtist, name, numberSongs, year, label, coverPicture) VALUES (10,10,'WHO ARE YOU', 18, 1970, 'WBR', NULL);
 
 
-INSERT INTO SONG (idSong, name, length, playCounts) VALUES (1, 'NUMB', 3, 463879205);
-INSERT INTO SONG (idSong, name, length, playCounts) VALUES (2, 'IN THE END', 4, 244687);
-INSERT INTO SONG (idSong, name, length, playCounts) VALUES (3, 'PRIDE AND JOY', 3, 767653);
-INSERT INTO SONG (idSong, name, length, playCounts) VALUES (4, 'SCARED', 3, 123123);
-INSERT INTO SONG (idSong, name, length, playCounts) VALUES (5, 'HELLS BELLS', 2, 2363879205);
-INSERT INTO SONG (idSong, name, length, playCounts) VALUES (6, 'PSYCHOSOCIAL', 12, 1245);
-INSERT INTO SONG (idSong, name, length, playCounts) VALUES (7, 'DONT KNOW', 5, 43634523);
-INSERT INTO SONG (idSong, name, length, playCounts) VALUES (8, 'TEXAS FLOOD', 7, 12);
-INSERT INTO SONG (idSong, name, length, playCounts) VALUES (9, 'HEAR ME NOW', 8, 42142);
-INSERT INTO SONG (idSong, name, length, playCounts) VALUES (10, 'PINBALL WIZARD', 1, 12312);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (1,1, 'NUMB', 3, 463879205);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (2,2, 'IN THE END', 4, 244687);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (3,3, 'PRIDE AND JOY', 3, 767653);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (4,4, 'SCARED', 3, 123123);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (5,5, 'HELLS BELLS', 2, 2363879205);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (6,6, 'PSYCHOSOCIAL', 12, 1245);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (7,7, 'DONT KNOW', 5, 43634523);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (8,8, 'TEXAS FLOOD', 7, 12);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (9,9, 'HEAR ME NOW', 8, 42142);
+INSERT INTO SONG (idSong, idAlbum, name, length, playCounts) VALUES (10,10, 'PINBALL WIZARD', 1, 12312);
 
 
 INSERT INTO CONCERT (idConcert, idLocation, idArtist, dateConcert) VALUES (1, 1, 1, '2006-12-12');
