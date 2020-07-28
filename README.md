@@ -8,7 +8,7 @@ Project developed for the **Databases** class using SQLite3 database engine.
 
 ## Project
 
-The goal of the project was to [create](database/criar.sql) a database, [fill](database/povoar.sql) it with data, add [triggers](triggers/) and [query](queries/) it.
+The goal of the project was to [create](database/criar.sql) a database, [fill](database/povoar.sql) it with data, add [triggers](Triggers/) and [query](Queries/) it.
 
 The topic chosen by the group was a **Music Streaming Service** (similar to Spotify, Apple Music).
 
