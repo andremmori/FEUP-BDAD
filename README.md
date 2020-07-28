@@ -1,6 +1,6 @@
 # BDAD
 
-Project developed for the **Databases** class using SQLite3 database.
+Project developed for the **Databases** class using SQLite3 database engine.
 
 ### Group 710
 * André Mamprin Mori, up201700493@fe.up.pt
